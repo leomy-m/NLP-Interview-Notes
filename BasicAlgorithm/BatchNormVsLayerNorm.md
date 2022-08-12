@@ -137,7 +137,9 @@ BN 的转换是针对单个神经元可训练的——不同神经元的输入�
 
 ### 5.1 batchNormalization与layerNormalization的区别
 Batch Normalization 的处理对象是对一批样本， Layer Normalization 的处理对象是单个样本。Batch Normalization 是对这批样本的同一维度特征做归一化， Layer Normalization 是对这单个样本的所有维度特征做归一化。
+
 ![](img/batch-layer.jpg)
+
 总结一下：
 BN、LN可以看作横向和纵向的区别。
 经过归一化再输入激活函数，得到的值大部分会落入非线性函数的线性区，导数远离导数饱和区，避免了梯度消失，这样来加速训练收敛过程。
